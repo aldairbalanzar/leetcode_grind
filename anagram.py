@@ -23,7 +23,6 @@ def isAnagram(str1, str2):
         print('these words are not an anagram.')
         return False
       else:
-        # because we know how many times the letters should appear in the 2nd word because of the 1st, we now subtract and bring the occurrances back to 0
         cache[letter] -= 1
 
     print('cache: ', cache)
