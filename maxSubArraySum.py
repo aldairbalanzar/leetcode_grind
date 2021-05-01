@@ -10,6 +10,7 @@ def maxSubArraySum(arr, num):
     for i in range(num):
       maxSum += arr[i]
     
+    # subtracts first value from last sum, then adds next incoming value as window slides
     currSum = maxSum
     for i in range(num, len(arr)):
       currSum = currSum - arr[i - num] + arr[i]
