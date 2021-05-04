@@ -1,3 +1,4 @@
+# Checks if in the passed arguments there are any duplicates
 def areThereDuplicates(*args):
 
     cache = {}
