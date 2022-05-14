@@ -1,4 +1,4 @@
-# Function that finds the amount unique values in array.open
+# Function that finds the amount unique values in array.
 def uniqueValuesCounter(arr):
   if len(arr) < 1:
     print('This array is empty.')
