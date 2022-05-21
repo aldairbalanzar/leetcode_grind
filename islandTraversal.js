@@ -60,19 +60,21 @@ const grid_1a = [
     return
   }
   
-  // let counter = 0
-  // // iterate through L1 array
-  // for(let i = 0; i < grid_1a.length; i++) {
-  //   // iterate through every L2 array within L1 array
-  //   for(let j = 0; j < grid_1a[i].length; j++){
-  //     // if array[i][j] value is "land (1)", run it through dfs function
-  //     if(grid_1a[i][j] === 1) {
-  //       dfs2(i,j)
-  //       // increment counter by 1
-  //       counter += 1
-  //     }
-  //   }
-  // }
+  let counter = 0
+  // iterate through L1 array
+  for(let i = 0; i < grid_1a.length; i++) {
+    // iterate through every L2 array within L1 array
+    for(let j = 0; j < grid_1a[i].length; j++){
+      // if array[i][j] value is "land (1)", run it through dfs function
+      if(grid_1a[i][j] === 1) {
+        dfs(i,j)
+        // increment counter by 1
+        counter += 1
+      }
+    }
+  }
+
+  console.log(`counter: ${counter}`);
   
   const grid_1b = [
     [1,0,0,1],
@@ -119,7 +121,7 @@ const grid_1a = [
     return
   }
     
-  let counter = 0
+  let counter2 = 0
   // iterate through L1 array
   for(let i = 0; i < grid_1b.length; i++) {
     // iterate through every L2 array within L1 array
@@ -128,9 +130,9 @@ const grid_1a = [
       if(grid_1b[i][j] === 1) {
         dfsWrap(i,j)
         // increment counter by 1
-        counter += 1
+        counter2 += 1
       }
     }
   }
   
-  console.log(counter);
+  console.log(`counter2: ${counter2}`);
