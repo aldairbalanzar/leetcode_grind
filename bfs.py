@@ -50,16 +50,16 @@ def bfs(start, target):
         for end in graph[curr]:
             # if our target is found
             if end == target:
-                print(f'found: {target}')
+                print(f'\nfound: {target}')
                 return
             # if not found in current's connnections and has not been seen, add it to seen and queue to check it's connections
             if end not in seen:
                 seen.add(end)
                 queue_stack.append(end)
 
-    # once queueu is empty and target was not found
-    print(f'target {target} not found')
+    # once queue is empty and target was not found
+    print(f'\ntarget {target} not found')
     return
 
-bfs('a', 'g')
+bfs('a', 'd')
 
