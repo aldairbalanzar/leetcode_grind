@@ -29,7 +29,7 @@ def create_graph():
     for conn in grid:
         add_edge(conn[0], conn[1])
     for node in map:
-        print(f'{node}: {map[node]}')
+        print(f'{node}: {map[node]}\n')
     return map
 
 def bfs(start, target):
@@ -50,16 +50,14 @@ def bfs(start, target):
         for end in graph[curr]:
             # if our target is found
             if end == target:
-                print(f'\nfound: {target}')
-                return
+                print(f'found: {target}\n')
             # if not found in current's connnections and has not been seen, add it to seen and queue to check it's connections
             if end not in seen:
                 seen.add(end)
                 queue_stack.append(end)
+                print(f'end: {end}')
 
-    # once queue is empty and target was not found
-    print(f'\ntarget {target} not found')
     return
 
-bfs('a', 'd')
+bfs('a', 'b')
 
